@@ -11,7 +11,6 @@
 		934F6133298B5623006166B3 /* SessionToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F6132298B5623006166B3 /* SessionToken.swift */; };
 		934F6137298B5874006166B3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F6136298B5874006166B3 /* Book.swift */; };
 		934F6139298B58C8006166B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F6138298B58C8006166B3 /* User.swift */; };
-		934F613D298B75B6006166B3 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F613C298B75B6006166B3 /* DebugView.swift */; };
 		934F613F298B7CD7006166B3 /* BookClubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F613E298B7CD7006166B3 /* BookClubs.swift */; };
 		934F6141298B8EC5006166B3 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F6140298B8EC5006166B3 /* HomeScreenViewController.swift */; };
 		934F6143298B8F75006166B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F6142298B8F75006166B3 /* LoginViewController.swift */; };
@@ -47,7 +46,6 @@
 		934F6132298B5623006166B3 /* SessionToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionToken.swift; sourceTree = "<group>"; };
 		934F6136298B5874006166B3 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		934F6138298B58C8006166B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		934F613C298B75B6006166B3 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		934F613E298B7CD7006166B3 /* BookClubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookClubs.swift; sourceTree = "<group>"; };
 		934F6140298B8EC5006166B3 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		934F6142298B8F75006166B3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -147,22 +145,8 @@
 			children = (
 				93642F732988A32B00F16CD8 /* AppDelegate.swift */,
 				93642F752988A32B00F16CD8 /* SceneDelegate.swift */,
-				93642F772988A32B00F16CD8 /* ViewController.swift */,
-				934F613C298B75B6006166B3 /* DebugView.swift */,
-				934F6142298B8F75006166B3 /* LoginViewController.swift */,
-				934F6144298B8F81006166B3 /* CreateAccountViewController.swift */,
-				93B4B05D298BA9A3008037E9 /* CreatedClubsViewController.swift */,
-				93B4B05B298BA968008037E9 /* AddUserViewController.swift */,
-				93B4B061298BAB62008037E9 /* UserTableViewCell.swift */,
-				934F6140298B8EC5006166B3 /* HomeScreenViewController.swift */,
-				93642F9A2988AB7200F16CD8 /* CreateClubView.swift */,
-				93642F9C2988B3A000F16CD8 /* MyClubsViewController.swift */,
-				93642FA02988B8BE00F16CD8 /* ClubTableViewCell.swift */,
-				93642FA22988C36300F16CD8 /* SingleClubView.swift */,
-				93642FA42988C66800F16CD8 /* BookTableViewCell.swift */,
-				93642F8B2988A3A100F16CD8 /* SingleBookView.swift */,
-				93642F8D2988A3BD00F16CD8 /* BookSearchCollectionViewCell.swift */,
-				93642F892988A38300F16CD8 /* BookSearchView.swift */,
+				93B4B063298DCDCC008037E9 /* View */,
+				93B4B064298DCDD8008037E9 /* Cells */,
 				934F613B298B6448006166B3 /* Network */,
 				93642F992988A44000F16CD8 /* Model */,
 				93642F792988A32B00F16CD8 /* Main.storyboard */,
@@ -185,6 +169,43 @@
 				934F6134298B5781006166B3 /* GoogleBooksAPI */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		93B4B063298DCDCC008037E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93B4B065298DF494008037E9 /* Authentication */,
+				934F6140298B8EC5006166B3 /* HomeScreenViewController.swift */,
+				93642F9C2988B3A000F16CD8 /* MyClubsViewController.swift */,
+				93642F9A2988AB7200F16CD8 /* CreateClubView.swift */,
+				93B4B05B298BA968008037E9 /* AddUserViewController.swift */,
+				93B4B05D298BA9A3008037E9 /* CreatedClubsViewController.swift */,
+				93642F892988A38300F16CD8 /* BookSearchView.swift */,
+				93642FA22988C36300F16CD8 /* SingleClubView.swift */,
+				93642F8B2988A3A100F16CD8 /* SingleBookView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93B4B064298DCDD8008037E9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				93642FA02988B8BE00F16CD8 /* ClubTableViewCell.swift */,
+				93B4B061298BAB62008037E9 /* UserTableViewCell.swift */,
+				93642F8D2988A3BD00F16CD8 /* BookSearchCollectionViewCell.swift */,
+				93642FA42988C66800F16CD8 /* BookTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		93B4B065298DF494008037E9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				93642F772988A32B00F16CD8 /* ViewController.swift */,
+				934F6142298B8F75006166B3 /* LoginViewController.swift */,
+				934F6144298B8F81006166B3 /* CreateAccountViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		B201F55C8CB38F006615399D /* Pods */ = {
@@ -326,7 +347,6 @@
 				934F6139298B58C8006166B3 /* User.swift in Sources */,
 				93642F8A2988A38300F16CD8 /* BookSearchView.swift in Sources */,
 				93642F9D2988B3A000F16CD8 /* MyClubsViewController.swift in Sources */,
-				934F613D298B75B6006166B3 /* DebugView.swift in Sources */,
 				934F6143298B8F75006166B3 /* LoginViewController.swift in Sources */,
 				93642F9B2988AB7200F16CD8 /* CreateClubView.swift in Sources */,
 				93642F922988A3F900F16CD8 /* BookEntry.swift in Sources */,

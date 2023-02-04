@@ -188,7 +188,6 @@ class Book(db.Model):
     author = db.Column(db.String, nullable = False)
     publishedDate = db.Column(db.String, nullable = False)
     pageCount = db.Column(db.Integer, nullable = False)
-    textSnippet = db.Column(db.String, nullable = False)
     smallThumbnail = db.Column(db.String, nullable = False)
     thumbnail = db.Column(db.String, nullable = False)
     book_bookclubs = db.relationship("BookClub", secondary = association_table2, back_populates = 'books')
@@ -201,7 +200,6 @@ class Book(db.Model):
         self.author = kwargs.get("author", "")
         self.publishedDate = kwargs.get("publishedDate", "")
         self.pageCount = kwargs.get("pageCount", "")
-        self.textSnippet = kwargs.get("textSnippet", "")
         self.smallThumbnail = kwargs.get("smallThumbnail", "")
         self.thumbnail = kwargs.get("thumbnail", "")
 
@@ -215,7 +213,6 @@ class Book(db.Model):
             "author": self.author,
             "publishedDate": self.publishedDate,
             "pageCount": self.pageCount,
-            "textSnippet": self.textSnippet,
             "smallThumbnail": self.smallThumbnail,
             "thumbnail": self.thumbnail,
             "book_bookclubs": [bookclub.simple_serialize() for bookclub in self.book_bookclubs]
@@ -231,7 +228,6 @@ class Book(db.Model):
             "author": self.author,
             "publishedDate": self.publishedDate,
             "pageCount": self.pageCount,
-            "textSnippet": self.textSnippet,
             "smallThumbnail": self.smallThumbnail,
             "thumbnail": self.thumbnail
         }

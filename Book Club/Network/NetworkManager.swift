@@ -17,18 +17,40 @@ class NetworkManager: ObservableObject {
         let endpoint = host1
 
         let params: Parameters = [
-            "q": keyword
+            "q": keyword,
+            "maxResults": 20
         ]
 
-        AF.request(endpoint, method: .get, parameters: params).validate().responseData { response in
+        AF.request(endpoint, method: .get, parameters: params).validate().responseJSON { response in
             switch response.result {
             case .success(let data):
-                let jsonDecoder = JSONDecoder()
-                if let books = try? jsonDecoder.decode(Books.self, from: data) {
-                    completion(books)
-                } else {
-                    print("Failed to decode")
+                let result1 = data as! NSDictionary
+                let result2 = result1["items"] as! NSArray
+                var result3: NSMutableArray = []
+                for i in result2 {
+                    result3.add(i)
                 }
+                var index = 0
+                var bookEntries: [BookEntry] = []
+                for i in 0...result3.count - 1 {
+                    let result4 = result3[index] as! NSDictionary
+                    let result5 = result4["volumeInfo"] as! NSDictionary
+                    if (result5["title"] == nil || result5["authors"] == nil || result5["publishedDate"] == nil
+                        || result5["pageCount"] == nil || result5["imageLinks"] == nil) {
+                        result3.removeObject(at: index)
+                        index -= 1
+                    }
+                    else {
+                        let result6 = result5["imageLinks"] as! NSDictionary
+                        let imageLinks = ImageLinks(smallThumbnail: result6["smallThumbnail"] as! String, thumbnail: result6["thumbnail"] as! String)
+                        let volumeInfo = VolumeInfo(title: result5["title"] as! String, authors: result5["authors"] as! [String], publishedDate: result5["publishedDate"] as! String, pageCount: result5["pageCount"] as! Int, imageLinks: imageLinks)
+                        let bookEntry = BookEntry(volumeInfo: volumeInfo)
+                        bookEntries.append(bookEntry)
+                    }
+                    index += 1
+                }
+                let books = Books(items: bookEntries)
+                completion(books)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -104,7 +126,7 @@ class NetworkManager: ObservableObject {
     }
     
     static func createBook(title: String, author: String, publishedDate: String, pageCount: Int,
-                           textSnippet: String, smallThumbnail: String, thumbnail: String, completion: @escaping (Book) -> Void) {
+                           smallThumbnail: String, thumbnail: String, completion: @escaping (Book) -> Void) {
         let endpoint = "\(host2)/books/"
 
         let params: Parameters = [
@@ -112,10 +134,16 @@ class NetworkManager: ObservableObject {
             "author": author,
             "publishedDate": publishedDate,
             "pageCount": pageCount,
-            "textSnippet": textSnippet,
             "smallThumbnail": smallThumbnail,
             "thumbnail": thumbnail
         ]
+        
+        print(title)
+        print(author)
+        print(publishedDate)
+        print(pageCount)
+        print(smallThumbnail)
+        print(thumbnail)
 
         AF.request(endpoint, method: .post, parameters: params, encoding: JSONEncoding.default).validate().responseData { response in
             switch response.result {

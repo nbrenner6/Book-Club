@@ -13,8 +13,6 @@ struct Book: Decodable {
     let author: String
     let publishedDate: String
     let pageCount: Int
-    let textSnippet: String
     let smallThumbnail: String
     let thumbnail: String
-//    let book_bookclubs: [BookClub]
 }

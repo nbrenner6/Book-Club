@@ -3,4 +3,102 @@
    uuid = "3EB4A4DA-EF76-430C-A1DA-7EA720C954FA"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE2143FC-8232-4AC9-8000-427AD1457D23"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Book Club/MyClubsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "init(selectUser:selectUserDelegate:selectUserID:addBook:addBookDelegate:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FE2143FC-8232-4AC9-8000-427AD1457D23 - f8d274ae2a7c5068"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Book_Club.MyClubsViewController.__allocating_init(selectUser: Swift.Bool, selectUserDelegate: Swift.Optional&lt;Book_Club.SelectUserDelegate&gt;, addBook: Swift.Bool, addBookDelegate: Swift.Optional&lt;Book_Club.AddBookDelegate&gt;) -&gt; Book_Club.MyClubsViewController"
+                  moduleName = "Book Club"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickbrenner/Desktop/Book%20Club/Book%20Club/MyClubsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "FE2143FC-8232-4AC9-8000-427AD1457D23 - 63eb59db81a5df68"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Book_Club.MyClubsViewController.init(selectUser: Swift.Bool, selectUserDelegate: Swift.Optional&lt;Book_Club.SelectUserDelegate&gt;, addBook: Swift.Bool, addBookDelegate: Swift.Optional&lt;Book_Club.AddBookDelegate&gt;) -&gt; Book_Club.MyClubsViewController"
+                  moduleName = "Book Club"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickbrenner/Desktop/Book%20Club/Book%20Club/MyClubsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29665005-94D7-459D-9B69-A82056C2441E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Book Club/MyClubsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A481949-1A2A-48A1-AE9E-22F727937F1A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Book Club/MyClubsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA3E37FF-6244-47F2-A28E-63D41EB89143"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Book Club/BookSearchView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

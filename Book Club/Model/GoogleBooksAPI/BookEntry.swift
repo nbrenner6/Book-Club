@@ -8,8 +8,6 @@
 import Foundation
 
 struct BookEntry : Decodable {
-    let id: String
     let volumeInfo: VolumeInfo
-    let searchInfo: SearchInfo
 }
 

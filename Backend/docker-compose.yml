@@ -1,6 +1,6 @@
 version: '3'
 services:
   demo:
-    image: nbrenner6/bookclubs:latest
+    image: nbrenner6/bookclubs:v1.2.0
     ports:
       - 8000:8000

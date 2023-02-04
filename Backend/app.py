@@ -383,13 +383,12 @@ def create_book():
     author = body.get("author"),
     publishedDate = body.get("publishedDate"),
     pageCount = body.get("pageCount"),
-    textSnippet = body.get("textSnippet"),
     smallThumbnail = body.get("smallThumbnail"),
     thumbnail = body.get("thumbnail"))
 
     if (new_book.title is None or new_book.author is None or
         new_book.publishedDate is None or new_book.pageCount is None or
-        new_book.textSnippet is None or new_book.smallThumbnail is None or
+        new_book.smallThumbnail is None or
         new_book.thumbnail is None): 
         return failure_response("Missing argument", 400)
     db.session.add(new_book)
